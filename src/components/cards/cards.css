@@ -1,0 +1,99 @@
+.container{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+.container .title{
+    max-width: 400px;
+    text-align: center;
+    font-weight: 200;
+}
+.container .title span{
+    font-weight: 600;
+    font-size: 31px;
+}
+.container .about{
+    width: 330px;
+    text-align: center;
+
+
+}
+.icons > div{
+    width: 300px;
+    height: 150px;
+    background-color: white;
+    padding: 2rem;
+    border-radius: 1rem;
+    box-shadow: 0 0 15px rgba(0, 0, 0, .2);
+    position: relative;
+    overflow: hidden;
+}
+.icons{
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-template-rows: repeat(4, 1fr);
+    gap: 40px 20px;
+}
+.icons > div::before{
+    content: "";
+    position: absolute;
+    width: 100%;
+    top: 0;
+    left: 0;
+    height: 5px;
+}
+.icons .super::before{
+    background-color: #57B6C8;
+}
+.icons .team::before{
+    background-color: #DF5A5A;
+}
+.icons .karma::before{
+    background-color: #F5AF5C;
+}
+.icons .calc::before{
+    background-color: #5A9CE5;
+}
+.icons .super{
+    grid-area: 2 / 1 / 4 / 2;
+}
+.icons .team{
+    grid-area: 1 / 2 / 3 / 3;
+}
+.icons .karma{
+    grid-area: 3 / 2 / 5 / 3;
+}
+.icons .calc{
+    grid-area: 2 / 3 / 4 / 4;
+}
+.icons > div .title-2{
+    margin-bottom: 10px;
+}
+.icons > div .p-1{
+    margin-bottom: 50px;
+}
+.icons > div img{
+    position: absolute;
+    bottom: 10px;
+    right: 30px;
+    width: 50px;
+}
+
+/* Layout */
+@media (max-width: 425px) {
+    /* Styles for smaller screens */
+    .icons {
+        display: flex;
+        flex-direction: column;
+        width: 350px;
+        height: 100%;
+        margin-bottom: 2rem;
+    }
+    .container .title{
+        max-width: 300px;
+        text-align: center;
+        font-weight: 200;
+    }
+
+  }
